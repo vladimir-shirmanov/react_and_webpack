@@ -58,4 +58,4 @@ typings/
 .env
 
 #webpack build directory
-public/*.js
+build/
