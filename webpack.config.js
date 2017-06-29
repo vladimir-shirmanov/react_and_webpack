@@ -1,7 +1,16 @@
+const path = require('path')
+
 module.exports = {
-    entry: __dirname + "/app/main.js",
+    devtool: 'eval-source-map',
+    entry: path.join(__dirname, "app/main.js"),
     output: {
-        path: __dirname + "/public",
+        path: path.join(__dirname, "public"),
         filename: "bundle.js"
+    },
+    
+    devServer: {
+        contentBase: path.join(__dirname, 'public'),
+        historyApiFallback: true,
+        inline: true
     }
 }
